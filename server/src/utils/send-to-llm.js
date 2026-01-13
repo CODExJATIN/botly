@@ -34,7 +34,7 @@ const sendToGemini = async (prompt) => {
 const ai = new GoogleGenAI({ apiKey: GEMINI_API_KEY});
 
   const response = await ai.models.generateContent({
-    model: "gemini-2.0-flash",
+    model: "gemini-flash-latest",
     contents: prompt,
   });
   return response.text  || "Gemini failed to respond.";
